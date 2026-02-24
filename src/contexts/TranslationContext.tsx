@@ -74,6 +74,7 @@ const commonTranslations: Record<string, Record<Language, string>> = {
   'msg.learn_more': { en: 'Learn More', my: 'ပိုမိုလေ့လာပါ' },
   'msg.view_all': { en: 'View All', my: 'အားလုံးကြည့်ပါ' },
   'msg.get_started': { en: 'Get Started', my: 'စတင်ပါ' },
+  'msg.start_referring': { en: 'Start Referring', my: 'စတင်ရည်ညွှန်းပါ' },
   
   // Job-related
   'job.title': { en: 'Job Title', my: 'အလုပ်ရာထူးအမည်' },

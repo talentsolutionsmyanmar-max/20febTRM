@@ -289,7 +289,7 @@ export default function HomePage() {
               </Link>
               <Link href="/register">
                 <Button size="sm" className="bg-teal-600 hover:bg-teal-700 text-white shadow-md shadow-teal-600/20">
-                  Get Started
+                  Start Referring
                 </Button>
               </Link>
             </div>
@@ -324,7 +324,7 @@ export default function HomePage() {
                 <Button variant="outline" size="sm" className="w-full">Sign In</Button>
               </Link>
               <Link href="/register" className="flex-1">
-                <Button size="sm" className="w-full bg-teal-600 hover:bg-teal-700">Get Started</Button>
+                <Button size="sm" className="w-full bg-teal-600 hover:bg-teal-700">Start Referring</Button>
               </Link>
             </div>
           </div>
