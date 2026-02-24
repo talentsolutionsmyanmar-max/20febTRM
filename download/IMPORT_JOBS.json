@@ -1,0 +1,262 @@
+[
+  {
+    "id": "job_001",
+    "title": "Senior Supervisor",
+    "title_mm": "အကြီးကြပ် တာဝန်ခံ",
+    "company": "RK Yangon Steel",
+    "location": "Thanlyin",
+    "salary": "7.5 Lakhs to 10 Lakhs",
+    "reward": 200000,
+    "level": "Senior"
+  },
+  {
+    "id": "job_002",
+    "title": "Warehouse Supervisor",
+    "title_mm": "ကျင်းစီမံခန့်ခွဲသူ",
+    "company": "Universal Energy",
+    "location": "Thingangyun",
+    "salary": "Nego",
+    "reward": 50000,
+    "level": "Mid"
+  },
+  {
+    "id": "job_003",
+    "title": "Content & Script Writer",
+    "title_mm": "အကြောင်းအရာနှင့် စကရစ်ရေးသူ",
+    "company": "Shwe Taung Htun",
+    "location": "Mingalar Taung Nyunt",
+    "salary": "4 Lakhs to 6 Lakhs",
+    "reward": 75000,
+    "level": "Mid"
+  },
+  {
+    "id": "job_004",
+    "title": "Site Engineer",
+    "title_mm": "နေရာခန့်အင်ဂျင်နီယာ",
+    "company": "Sun Myat Tun",
+    "location": "Botahtaung",
+    "salary": "7.5 Lakhs",
+    "reward": 200000,
+    "level": "Mid"
+  },
+  {
+    "id": "job_005",
+    "title": "Data Collector",
+    "title_mm": "ဒေတာစုဆောင်းသူ",
+    "company": "NielsenIQ Myanmar",
+    "location": "Mdy,Sagaing,Meikhtila",
+    "salary": "3.5 Lakhs",
+    "reward": 50000,
+    "level": "Mid"
+  },
+  {
+    "id": "job_006",
+    "title": "Loan Officer",
+    "title_mm": "ချေးငွေမန်နေဂျာ",
+    "company": "Real Aid Microfinance",
+    "location": "Ayeyarwady",
+    "salary": "4 Lakhs to 5 Lakhs",
+    "reward": 75000,
+    "level": "Entry"
+  },
+  {
+    "id": "job_007",
+    "title": "Cashier",
+    "title_mm": "ငွေရှင်",
+    "company": "Real Aid Microfinance",
+    "location": "Ayeyarwady",
+    "salary": "Above 3 Lakhs",
+    "reward": 50000,
+    "level": "Mid"
+  },
+  {
+    "id": "job_008",
+    "title": "Brand Executive",
+    "title_mm": "ဘရန်းအမှုဆောင်",
+    "company": "Unicharm Myanmar",
+    "location": "Yankin",
+    "salary": "7 Lakhs to 9 Lakhs",
+    "reward": 200000,
+    "level": "Mid"
+  },
+  {
+    "id": "job_009",
+    "title": "Assistant Brand Manager",
+    "title_mm": "ဘရန်းမန်နေဂျာလက်ထောက်",
+    "company": "Unicharm Myanmar",
+    "location": "Yankin",
+    "salary": "15 Lakhs to 17 Lakhs",
+    "reward": 400000,
+    "level": "Entry"
+  },
+  {
+    "id": "job_010",
+    "title": "Receptionist",
+    "title_mm": "ကြိုဆိုရေးမှူး",
+    "company": "Myanmar Information Technology",
+    "location": "Insein",
+    "salary": "3 Lakhs to 4 Lakhs",
+    "reward": 50000,
+    "level": "Mid"
+  },
+  {
+    "id": "job_011",
+    "title": "Assistant Accountant",
+    "title_mm": "စာရင်းကိုင်လက်ထောက်",
+    "company": "KBZ Life Insurance",
+    "location": "Bahan",
+    "salary": "4 Lakhs to 5 Lakhs",
+    "reward": 200000,
+    "level": "Entry"
+  },
+  {
+    "id": "job_012",
+    "title": "Accountant",
+    "title_mm": "စာရင်းကိုင်",
+    "company": "Universal Energy",
+    "location": "Thingangyun",
+    "salary": "6 Lakhs to 7 Lakhs",
+    "reward": 200000,
+    "level": "Mid"
+  },
+  {
+    "id": "job_013",
+    "title": "Online Sale",
+    "title_mm": "အွန်လိုင်းရောင်းသူ",
+    "company": "Salpyar ",
+    "location": "North Dagon",
+    "salary": "2.4 Lakhs",
+    "reward": 50000,
+    "level": "Mid"
+  },
+  {
+    "id": "job_014",
+    "title": "Graphic Designer",
+    "title_mm": "ဂရပ်ဖစ်ဒီဇိုင်နာ",
+    "company": "WOW Sport",
+    "location": "Kamaryut",
+    "salary": "Around 10 Lakhs",
+    "reward": 300000,
+    "level": "Mid"
+  },
+  {
+    "id": "job_015",
+    "title": "Senior Sales Executive",
+    "title_mm": "အရောင်းမန်နေဂျာကြီး",
+    "company": "WOW Sport",
+    "location": "Kamaryut",
+    "salary": "10 Lakhs",
+    "reward": 300000,
+    "level": "Senior"
+  },
+  {
+    "id": "job_016",
+    "title": "Senior Agency Sales Representative",
+    "title_mm": "အေဂျင်စီအရောင်းကိုယ်စားလှယ်",
+    "company": "AMI",
+    "location": "Kamaryut",
+    "salary": "5 Lakhs to 6.5 Lakhs",
+    "reward": 75000,
+    "level": "Senior"
+  },
+  {
+    "id": "job_017",
+    "title": "Admin Supervisor",
+    "title_mm": "အုပ်ချုပ်ရေးကြီးကြပ်သူ",
+    "company": "TOMO",
+    "location": "South Dagon",
+    "salary": "5 Lakhs to 6 Lakhs",
+    "reward": 75000,
+    "level": "Mid"
+  },
+  {
+    "id": "job_018",
+    "title": "IT Supervisor",
+    "title_mm": "IT ကြီးကြပ်သူ",
+    "company": "Wave Plus",
+    "location": "Mingalardon",
+    "salary": "6 Lakhs",
+    "reward": 75000,
+    "level": "Mid"
+  },
+  {
+    "id": "job_019",
+    "title": "Sales Staff",
+    "title_mm": "အရောင်းဝန်ထမ်း",
+    "company": "Yangoods",
+    "location": "Pyin Oo Lwin",
+    "salary": "2.04 Lakhs",
+    "reward": 50000,
+    "level": "Entry"
+  },
+  {
+    "id": "job_020",
+    "title": "Senior Page Admin",
+    "title_mm": "စာမျက်နှာအက်ဒမင်ကြီး",
+    "company": "TOMO",
+    "location": "Tamwe",
+    "salary": "Nego",
+    "reward": 50000,
+    "level": "Senior"
+  },
+  {
+    "id": "job_021",
+    "title": "Junior Page Admin",
+    "title_mm": "စာမျက်နှာအက်ဒမင်ငယ်",
+    "company": "TOMO",
+    "location": "Tamwe",
+    "salary": "3 Lakhs to 3.5 Lakhs",
+    "reward": 50000,
+    "level": "Entry"
+  },
+  {
+    "id": "job_022",
+    "title": "Junior Accountant",
+    "title_mm": "စာရင်းကိုင်ငယ်",
+    "company": "Unicharm Myanmar",
+    "location": "Yankin",
+    "salary": "3.5 Lakhs to 4 Lakhs",
+    "reward": 200000,
+    "level": "Entry"
+  },
+  {
+    "id": "job_023",
+    "title": "Accountant",
+    "title_mm": "စာရင်းကိုင်",
+    "company": "GK International Company",
+    "location": "Kamaryut",
+    "salary": "6.5 Lakhs to 8 Lakhs",
+    "reward": 200000,
+    "level": "Mid"
+  },
+  {
+    "id": "job_024",
+    "title": "Assistant Project Coordinator",
+    "title_mm": "ပရောဂျက်ကိုဩဒိနာတူလက်ထောက်",
+    "company": "GK International Company",
+    "location": "Kamaryut",
+    "salary": "3.5 Lakhs to 5 Lakhs",
+    "reward": 75000,
+    "level": "Entry"
+  },
+  {
+    "id": "job_025",
+    "title": "Interior Designer",
+    "title_mm": "အတွင်းပိုင်းဒီဇိုင်နာ",
+    "company": "Delight Amatat",
+    "location": "Thingangyun",
+    "salary": "10 Lakhs to 15 Lakhs",
+    "reward": 300000,
+    "level": "Mid"
+  },
+  {
+    "id": "job_026",
+    "title": "Quantity Surveyor",
+    "title_mm": "ပမာဏတိုင်းတာသူ",
+    "company": "Delight Amatat",
+    "location": "Thingangyun",
+    "salary": "10 Lakhs to 15 Lakhs",
+    "reward": 300000,
+    "level": "Mid"
+  }
+]
