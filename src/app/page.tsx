@@ -6,7 +6,7 @@ import {
   Briefcase, Check, Building2, Shield, Award, ChevronRight,
   Menu, X, ArrowRight, Clock, TrendingUp, Globe,
   Mail, MapPin, Linkedin, Facebook, Quote, Star, Verified,
-  PlayCircle, Users, Wallet
+  PlayCircle, Users, Wallet, ListChecks, Trophy, CreditCard, ShieldCheck
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -101,6 +101,64 @@ const howItWorks = [
     description: 'When your referral is hired, receive your reward directly via KPay within 30-60 days.',
     descriptionMm: 'သင့်ရည်ညွှန်းသူ အလုပ်ရသောအခါ KPay မှတစ်ဆင့် ရက် ၃၀-၆၀ အတွင်း ဆုလာဘ် ချက်ချင်းရပါမည်။',
     icon: Wallet,
+  },
+];
+
+// Explore ReferTRM cards - bilingual
+const exploreCards = [
+  { 
+    title: 'How It Works',
+    titleMm: 'မည်သို့ လုပ်ဆောင်သည်',
+    teaser: '3 simple steps to start earning',
+    teaserMm: 'စတင်အချိန်းအသာ ၃ ခု',
+    icon: ListChecks,
+    href: '/how-it-works',
+    color: 'bg-blue-50 text-blue-600',
+  },
+  { 
+    title: 'Find Jobs',
+    titleMm: 'အလုပ်ရှာဖွေပါ',
+    teaser: 'High-reward verified positions',
+    teaserMm: 'ဆုလာဘ်မြင့် အလုပ်နေရာများ',
+    icon: Briefcase,
+    href: '/dashboard/jobs',
+    color: 'bg-emerald-50 text-emerald-600',
+  },
+  { 
+    title: 'For Employers',
+    titleMm: 'လုပ်ငန်းရှင်များအတွက်',
+    teaser: 'Post jobs & get referrals',
+    teaserMm: 'အလုပ်တင်ပြီး ရည်ညွှန်းလက်ခံပါ',
+    icon: Building2,
+    href: '/company',
+    color: 'bg-purple-50 text-purple-600',
+  },
+  { 
+    title: 'Success Stories',
+    titleMm: 'အောင်မြင်မှု ဇာတ်ကြောင်းများ',
+    teaser: 'Real earnings up to 900k MMK',
+    teaserMm: 'ကျပ် ၉ သိန်းထိ ရရှိဖူးသည်',
+    icon: Trophy,
+    href: '/success-stories',
+    color: 'bg-amber-50 text-amber-600',
+  },
+  { 
+    title: 'Guaranteed Payouts',
+    titleMm: 'အာမခံ ပေးချေမှု',
+    teaser: '15M+ MMK paid via KPay',
+    teaserMm: 'ကျပ် သန်း ၁၅+ ပေးခဲ့',
+    icon: CreditCard,
+    href: '/payouts',
+    color: 'bg-rose-50 text-rose-600',
+  },
+  { 
+    title: 'Why ReferTRM',
+    titleMm: 'ReferTRM အကြောင်း',
+    teaser: 'Licensed & transparent',
+    teaserMm: 'လိုင်စင်ရ ရိုးသားသည်',
+    icon: ShieldCheck,
+    href: '/why-refertrm',
+    color: 'bg-teal-50 text-teal-600',
   },
 ];
 
@@ -490,6 +548,61 @@ export default function HomePage() {
                 </div>
                 <span className="text-xs text-gray-400 ml-13 burmese-text">{badge.labelMm}</span>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================
+          EXPLORE REFERTRM - Icon Cards Grid
+          ============================================ */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+              Explore ReferTRM
+            </h2>
+            <p className="text-teal-600 font-medium burmese-text">
+              ReferTRM ကို စူးစမ်းလေ့လာပါ
+            </p>
+            <p className="text-gray-600 mt-2">
+              Everything you need to start earning through referrals
+            </p>
+          </div>
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {exploreCards.map((card, index) => (
+              <Link key={index} href={card.href} className="group">
+                <div className="bg-white rounded-2xl p-6 border border-gray-100 h-full
+                              hover:border-gray-200 hover:shadow-xl hover:shadow-gray-900/5
+                              hover:scale-[1.02] transition-all duration-300">
+                  {/* Icon */}
+                  <div className={`w-16 h-16 rounded-2xl ${card.color} flex items-center justify-center mb-5
+                                group-hover:scale-110 transition-transform duration-300`}>
+                    <card.icon className="h-8 w-8" />
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-teal-600 transition-colors">
+                    {card.title}
+                  </h3>
+                  <p className="text-teal-600 text-sm mb-3 burmese-text">
+                    {card.titleMm}
+                  </p>
+                  
+                  {/* Teaser */}
+                  <p className="text-gray-600 text-sm mb-3">{card.teaser}</p>
+                  <p className="text-gray-400 text-xs burmese-text">{card.teaserMm}</p>
+                  
+                  {/* Learn More */}
+                  <div className="flex items-center gap-2 text-teal-600 text-sm font-medium mt-4 pt-4 border-t border-gray-50">
+                    Learn More
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
