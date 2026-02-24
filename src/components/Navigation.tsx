@@ -1,20 +1,55 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Send, Home, Briefcase, Building2, Users, GraduationCap, ChevronRight } from 'lucide-react';
+import { Menu, X, Send, Home, Briefcase, Building2, Users, GraduationCap, ChevronRight, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { LanguageToggle } from '@/components/ui/LanguageToggle';
-import { useTranslation } from '@/contexts/TranslationContext';
 
 const navItems = [
-  { labelKey: 'nav.home', label: 'Home', href: '#', labelMm: 'ပင်မစာမျက်နှာ', icon: Home },
-  { labelKey: 'nav.jobs', label: 'Jobs', href: '#jobs', labelMm: 'အလုပ်များ', icon: Briefcase },
-  { labelKey: 'nav.companies', label: 'Companies', href: '#companies', labelMm: 'ကုမ္ပဏီများ', icon: Building2 },
-  { labelKey: 'nav.refer', label: 'Refer', href: '#why-refer', labelMm: 'ရည်ညွှန်းပါ', icon: Users },
-  { labelKey: 'nav.academy', label: 'Academy', href: '#academy', labelMm: 'သင်ကြားရေး', icon: GraduationCap },
+  { label: 'Home', href: '#', labelMm: 'ပင်မစာမျက်နှာ', icon: Home },
+  { label: 'Jobs', href: '#jobs', labelMm: 'အလုပ်များ', icon: Briefcase },
+  { label: 'Companies', href: '#companies', labelMm: 'ကုမ္ပဏီများ', icon: Building2 },
+  { label: 'Refer', href: '#why-refer', labelMm: 'ရည်ညွှန်းပါ', icon: Users },
+  { label: 'Academy', href: '#academy', labelMm: 'သင်ကြားရေး', icon: GraduationCap },
 ];
+
+// Google Translate Component
+function GoogleTranslate() {
+  useEffect(() => {
+    // Add Google Translate script
+    const addScript = () => {
+      if (!document.getElementById('google-translate-script')) {
+        const script = document.createElement('script');
+        script.id = 'google-translate-script';
+        script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        script.async = true;
+        document.body.appendChild(script);
+      }
+    };
+
+    // Initialize callback
+    (window as any).googleTranslateElementInit = () => {
+      new (window as any).google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'en,my',
+          layout: (window as any).google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false,
+        },
+        'google_translate_element'
+      );
+    };
+
+    addScript();
+  }, []);
+
+  return (
+    <div className="flex items-center gap-2">
+      <Globe className="h-4 w-4 text-slate-400" />
+      <div id="google_translate_element" className="text-sm" />
+    </div>
+  );
+}
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,8 +95,9 @@ export default function Navigation() {
             ))}
           </nav>
 
-          {/* CTA Button - Desktop */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* CTA Button & Language - Desktop */}
+          <div className="hidden md:flex items-center gap-4">
+            <GoogleTranslate />
             <Button
               className="btn-primary btn-mobile touch-target"
               onClick={() => window.open('https://t.me/ReferTRM', '_blank')}
@@ -154,8 +190,13 @@ export default function Navigation() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: navItems.length * 0.05 }}
-                  className="mt-4 pt-4 border-t border-white/5"
+                  className="mt-4 pt-4 border-t border-white/5 space-y-3"
                 >
+                  {/* Language Toggle - Mobile */}
+                  <div className="flex justify-center">
+                    <GoogleTranslate />
+                  </div>
+                  
                   <Button
                     className="w-full btn-primary btn-mobile text-base py-5"
                     onClick={() => window.open('https://t.me/ReferTRM', '_blank')}

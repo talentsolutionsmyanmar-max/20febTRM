@@ -52,14 +52,28 @@ const stats = [
   { value: '98%', label: 'Success Rate', labelMm: 'အောင်မြင်မှု ၉၈%', description: 'Satisfaction from employers' },
 ];
 
-// Real partner companies
+// Real partner companies - Premium partners have logos
 const partnerCompanies = [
-  { name: 'Makro Myanmar', industry: 'Retail', headcount: '180+' },
-  { name: 'G&G Group', industry: 'Manufacturing', headcount: '20+' },
-  { name: 'EAC Myanmar', industry: 'Engineering', headcount: '50+' },
-  { name: 'JDE Myanmar', industry: 'FMCG', headcount: '30+' },
-  { name: 'RK Steel', industry: 'Construction', headcount: '40+' },
-  { name: 'NielsenIQ', industry: 'Research', headcount: '25+' },
+  { name: 'Makro Myanmar', industry: 'Retail', headcount: '180+', premium: true, logo: '/partner-logo-1.png' },
+  { name: 'EAC Myanmar', industry: 'Engineering', headcount: '50+', premium: true, logo: '/partner-logo-2.png' },
+  { name: 'JDE Myanmar', industry: 'FMCG', headcount: '30+', premium: true, logo: '/partner-logo-3.png' },
+  { name: 'RK Yangon Steel', industry: 'Construction', headcount: '40+', premium: false },
+  { name: 'Universal Energy', industry: 'Energy', headcount: '50+', premium: false },
+  { name: 'NielsenIQ Myanmar', industry: 'Research', headcount: '25+', premium: false },
+  { name: 'Unicharm Myanmar', industry: 'FMCG', headcount: '100+', premium: false },
+  { name: 'KBZ Life Insurance', industry: 'Insurance', headcount: '200+', premium: false },
+  { name: 'WOW Sport', industry: 'Retail', headcount: '30+', premium: false },
+  { name: 'TOMO', industry: 'Technology', headcount: '40+', premium: false },
+  { name: 'Wave Plus', industry: 'Technology', headcount: '20+', premium: false },
+  { name: 'GK International', industry: 'Trading', headcount: '35+', premium: false },
+  { name: 'Delight Amatat', industry: 'Interior Design', headcount: '25+', premium: false },
+  { name: 'Real Aid Microfinance', industry: 'Finance', headcount: '60+', premium: false },
+  { name: 'AMI', industry: 'Insurance', headcount: '30+', premium: false },
+  { name: 'Yangoods', industry: 'Retail', headcount: '20+', premium: false },
+  { name: 'Shwe Taung Htun', industry: 'Media', headcount: '15+', premium: false },
+  { name: 'Sun Myat Tun', industry: 'Construction', headcount: '20+', premium: false },
+  { name: 'Myanmar IT', industry: 'Technology', headcount: '25+', premium: false },
+  { name: 'Salpyar', industry: 'E-commerce', headcount: '15+', premium: false },
 ];
 
 // How it works steps - bilingual
@@ -408,6 +422,33 @@ export default function HomePage() {
       </section>
 
       {/* ============================================
+          TRUSTED BY - Premium Partner Logos
+          ============================================ */}
+      <section className="py-12 md:py-16 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8">
+            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6">
+              Trusted by Myanmar&apos;s Industry Leaders
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+            {partnerCompanies.filter(c => c.premium).map((company, index) => (
+              <div key={index} className="flex flex-col items-center group">
+                <div className="h-12 md:h-14 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <img 
+                    src={company.logo} 
+                    alt={`${company.name} logo`}
+                    className="h-full w-auto object-contain"
+                  />
+                </div>
+                <p className="text-xs text-gray-500 mt-2 font-medium">{company.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================
           STATS BAR - Clean & Professional - Bilingual
           ============================================ */}
       <section className="bg-gray-900 py-10 md:py-12">
@@ -574,21 +615,70 @@ export default function HomePage() {
             </p>
           </div>
           
-          {/* Companies Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
-            {partnerCompanies.map((company, index) => (
-              <div key={index} className="group">
-                <div className="bg-gray-800/50 rounded-xl p-5 text-center border border-gray-700/50
-                              hover:border-teal-500/30 hover:bg-gray-800 transition-all duration-200 h-full">
-                  <p className="font-medium text-white text-sm mb-1">{company.name}</p>
-                  <p className="text-xs text-gray-500">{company.industry}</p>
-                  <p className="text-[10px] text-teal-400/70 mt-2">{company.headcount} employees</p>
+          {/* Premium Partners Row */}
+          <div className="mb-10">
+            <p className="text-xs font-semibold text-teal-400/70 uppercase tracking-wider mb-6 text-center">
+              Premium Partners
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {partnerCompanies.filter(c => c.premium).map((company, index) => (
+                <div key={index} className="group">
+                  <div className="bg-gradient-to-br from-gray-800 to-gray-800/50 rounded-2xl p-6 text-center border border-teal-500/30
+                                hover:border-teal-400/50 hover:shadow-lg hover:shadow-teal-500/10 transition-all duration-300 h-full">
+                    <div className="h-16 w-auto mx-auto mb-4 grayscale group-hover:grayscale-0 transition-all duration-300">
+                      <img 
+                        src={company.logo} 
+                        alt={`${company.name} logo`}
+                        className="h-full w-auto object-contain mx-auto"
+                      />
+                    </div>
+                    <p className="font-semibold text-white mb-1">{company.name}</p>
+                    <p className="text-xs text-gray-400 mb-2">{company.industry}</p>
+                    <p className="text-[11px] text-teal-400 font-medium">{company.headcount} employees</p>
+                    <div className="mt-3 pt-3 border-t border-gray-700/50">
+                      <span className="text-[10px] text-teal-300/80 uppercase tracking-wider font-semibold">Official Partner</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
-          <p className="text-center text-sm text-gray-500">
+          {/* Other Partners Row - Horizontal Marquee Scroll */}
+          <div>
+            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6 text-center">
+              Trusted Partners
+            </p>
+            <div className="relative overflow-hidden">
+              {/* Gradient fade edges */}
+              <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-900 to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-900 to-transparent z-10 pointer-events-none" />
+              
+              {/* Scrolling container */}
+              <div className="flex animate-marquee">
+                {/* First set of partners */}
+                {partnerCompanies.filter(c => !c.premium).map((company, index) => (
+                  <div key={index} className="flex-shrink-0 mx-4">
+                    <div className="bg-gray-800/50 rounded-lg px-6 py-3 border border-gray-700/50
+                                  hover:border-teal-500/30 hover:bg-gray-800 transition-all duration-200">
+                      <p className="font-medium text-white text-sm whitespace-nowrap">{company.name}</p>
+                    </div>
+                  </div>
+                ))}
+                {/* Duplicate for seamless loop */}
+                {partnerCompanies.filter(c => !c.premium).map((company, index) => (
+                  <div key={`dup-${index}`} className="flex-shrink-0 mx-4">
+                    <div className="bg-gray-800/50 rounded-lg px-6 py-3 border border-gray-700/50
+                                  hover:border-teal-500/30 hover:bg-gray-800 transition-all duration-200">
+                      <p className="font-medium text-white text-sm whitespace-nowrap">{company.name}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <p className="text-center text-sm text-gray-500 mt-10">
             All partner companies undergo verification before listing positions on our platform.
           </p>
         </div>
