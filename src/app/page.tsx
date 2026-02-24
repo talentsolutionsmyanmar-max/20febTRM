@@ -54,9 +54,9 @@ const stats = [
 
 // Real partner companies - Premium partners have logos
 const partnerCompanies = [
-  { name: 'Makro Myanmar', industry: 'Retail', headcount: '180+', premium: true, logo: '/partner-logo-1.png' },
-  { name: 'EAC Myanmar', industry: 'Engineering', headcount: '50+', premium: true, logo: '/partner-logo-2.png' },
-  { name: 'JDE Myanmar', industry: 'FMCG', headcount: '30+', premium: true, logo: '/partner-logo-3.png' },
+  { name: 'Makro Myanmar', industry: 'Retail', headcount: '200+', premium: true, logo: '/partner-logo-1.png' },
+  { name: 'EAC Myanmar', industry: 'Engineering', headcount: '5,000+', premium: true, logo: '/partner-logo-2.png' },
+  { name: 'JDE Myanmar', industry: 'FMCG', headcount: '250+', premium: true, logo: '/partner-logo-3.png' },
   { name: 'RK Yangon Steel', industry: 'Construction', headcount: '40+', premium: false },
   { name: 'Universal Energy', industry: 'Energy', headcount: '50+', premium: false },
   { name: 'NielsenIQ Myanmar', industry: 'Research', headcount: '25+', premium: false },
